@@ -1,0 +1,437 @@
+@import "Variables";
+@import "Functions";
+/////////////////////////
+img {
+  width: 100%;
+}
+
+* {
+  @include fontFamily;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #edf2f7;
+}
+li {
+  list-style-type: none !important;
+
+}
+ul{
+  padding: 0!important;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-align: justify;
+  font-weight: lighter;
+  line-height: 2;
+
+}
+
+p {
+  margin: 0.5rem 0;
+  text-align: justify;
+  line-height: 2;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  line-height: 2;
+
+}
+
+a:hover {
+
+}
+////////////////////////////////// padding classes
+.p-1-h {
+  @include p(all,0.5rem);
+}
+
+.p-2-h {
+  @include p(all,0.85rem);
+}
+///////////////
+$p:1;
+@for $item from 3 through 7{
+  .p-#{$item}-h{
+    @include p(all,$p+0rem);
+  }
+  $p:$p+0.25
+}
+///////////////////
+$p1:2.5;
+@for $item from 8 through 10{
+  .p-#{$item}-h{
+    @include p(all,$p1+0rem);
+  }
+  $p1:$p1+1
+}
+///////////////////
+.px-1-h {
+  @include p(all,0 0.5rem);
+}
+
+.px-2-h {
+  @include p(all,0 0.85rem);
+}
+///////////////////
+$p3:1;
+@for $item from 3 through 7{
+  .px-#{$item}-h{
+    @include p(all,0  $p3+0rem);
+  }
+  $p3:$p3+0.25
+}
+///////////////////
+$p4:2.5;
+@for $item from 8 through 10{
+  .px-#{$item}-h{
+    @include p(all,0 $p4+0rem);
+  }
+  $p4:$p4+1
+}
+//////////////////
+
+.py-1-h {
+  @include p(all,0.5rem 0);
+}
+
+.py-2-h {
+  @include p(all,0.85rem 0);
+}
+/////////
+$p5:1;
+@for $item from 3 through 7{
+  .py-#{$item}-h{
+    @include p(all,$p5+0rem 0);
+  }
+  $p5:$p5+0.25
+}
+//////////////
+$p6:2.5;
+@for $item from 8 through 10{
+  .py-#{$item}-h{
+    @include p(all,$p6+0rem 0);
+  }
+  $p6:$p6+1
+}
+//////////////
+
+.pr-1-h {
+  @include p(r,0.5rem);
+}
+
+.pr-2-h {
+  @include p(r,0.85rem);
+}
+///////////////////////
+$p7:1;
+@for $item from 3 through 7{
+  .pr-#{$item}-h{
+    @include p(r,$p7+0rem);
+  }
+  $p7:$p7+0.25
+}
+//////////////
+$p8:2.5;
+@for $item from 8 through 10{
+  .pr-#{$item}-h{
+    @include p(r,$p8+0rem);
+  }
+  $p8:$p8+1
+}
+//////////////
+
+.pl-1-h {
+  @include p(l,0.5rem);
+}
+
+.pl-2-h {
+  @include p(l,0.85rem);
+}
+/////////////////////
+$p9:1;
+@for $item from 3 through 7{
+  .pl-#{$item}-h{
+    @include p(l,$p9+0rem);
+  }
+  $p9:$p9+0.25
+}
+//////////////
+$p10:2.5;
+@for $item from 8 through 10{
+  .pl-#{$item}-h{
+    @include p(l,$p10+0rem);
+  }
+  $p10:$p10+1
+}
+/////////////////////
+
+.pt-1-h {
+  @include p(t,0.5rem);
+}
+
+.pt-2-h {
+  @include p(t,0.85rem);
+}
+////////////////////
+$p11:1;
+@for $item from 3 through 7{
+  .pt-#{$item}-h{
+    @include p(t,$p11+0rem);
+  }
+  $p11:$p11+0.25
+}
+//////////////
+$p12:2.5;
+@for $item from 8 through 10{
+  .pt-#{$item}-h{
+    @include p(t,$p12+0rem);
+  }
+  $p12:$p12+1
+}
+////////////////////
+
+.pb-1-h {
+  @include p(b,0.5rem);
+}
+
+.pb-2-h {
+  @include p(b,0.85rem);
+}
+/////////////////////
+$p13:1;
+@for $item from 3 through 7{
+  .pb-#{$item}-h{
+    @include p(b,$p13+0rem);
+  }
+  $p13:$p13+0.25
+}
+//////////////
+$p14:2.5;
+@for $item from 8 through 10{
+  .pb-#{$item}-h{
+    @include p(b,$p14+0rem);
+  }
+  $p14:$p14+1
+}
+
+///////////////////////////////////////// margin classes/////////////////////////////////////////////////////
+.m-1-h {
+  @include m(all,0.5rem);
+}
+
+.m-2-h {
+  @include m(all,0.85rem);
+}
+///////////////
+$m:1;
+@for $item from 3 through 7{
+  .m-#{$item}-h{
+    @include m(all,$m+0rem);
+  }
+  $m:$m+0.25
+}
+///////////////////
+$m1:2.5;
+@for $item from 8 through 10{
+  .m-#{$item}-h{
+    @include m(all,$m1+0rem);
+  }
+  $m1:$m1+1
+}
+///////////////////
+.mx-1-h {
+  @include m(all,0 0.5rem);
+}
+
+.mx-2-h {
+  @include m(all,0 0.85rem);
+}
+///////////////////
+$m3:1;
+@for $item from 3 through 7{
+  .mx-#{$item}-h{
+    @include m(all,0  $m3+0rem);
+  }
+  $m3:$m3+0.25
+}
+///////////////////
+$m4:2.5;
+@for $item from 8 through 10{
+  .mx-#{$item}-h{
+    @include m(all,0 $m4+0rem);
+  }
+  $m4:$m4+1
+}
+//////////////////
+
+.my-1-h {
+  @include m(all,0.5rem 0);
+}
+
+.my-2-h {
+  @include m(all,0.85rem 0);
+}
+/////////
+$m5:1;
+@for $item from 3 through 7{
+  .my-#{$item}-h{
+    @include m(all,$m5+0rem 0);
+  }
+  $m5:$m5+0.25
+}
+//////////////
+$m6:2.5;
+@for $item from 8 through 10{
+  .my-#{$item}-h{
+    @include m(all,$m6+0rem 0);
+  }
+  $m6:$m6+1
+}
+//////////////
+
+.mr-1-h {
+  @include m(r,0.5rem);
+}
+
+.mr-2-h {
+  @include m(r,0.85rem);
+}
+///////////////////////
+$m7:1;
+@for $item from 3 through 7{
+  .mr-#{$item}-h{
+    @include m(r,$m7+0rem);
+  }
+  $m7:$m7+0.25
+}
+//////////////
+$m8:2.5;
+@for $item from 8 through 10{
+  .mr-#{$item}-h{
+    @include m(all,$m8+0rem);
+  }
+  $m8:$m8+1
+}
+//////////////
+
+.ml-1-h {
+  @include m(l,0.5rem);
+}
+
+.ml-2-h {
+  @include m(l,0.85rem);
+}
+/////////////////////
+$m9:1;
+@for $item from 3 through 7{
+  .ml-#{$item}-h{
+    @include m(l,$m9+0rem);
+  }
+  $m9:$m9+0.25
+}
+//////////////
+$m10:2.5;
+@for $item from 8 through 10{
+  .ml-#{$item}-h{
+    @include m(l,$m10+0rem);
+  }
+  $m10:$m10+1
+}
+/////////////////////
+
+.mt-1-h {
+  @include m(t,0.5rem);
+}
+
+.mt-2-h {
+  @include m(t,0.85rem);
+}
+////////////////////
+$m11:1;
+@for $item from 3 through 7{
+  .mt-#{$item}-h{
+    @include m(t,$m11+0rem);
+  }
+  $m11:$m11+0.25
+}
+//////////////
+$m12:2.5;
+@for $item from 8 through 10{
+  .mt-#{$item}-h{
+    @include m(t,$m12+0rem);
+  }
+  $m12:$m12+1
+}
+////////////////////
+
+.mb-1-h {
+  @include m(b,0.5rem);
+}
+
+.mb-2-h {
+  @include m(b,0.85rem);
+}
+/////////////////////
+$m13:1;
+@for $item from 3 through 7{
+  .mb-#{$item}-h{
+    @include m(b,$m13+0rem);
+  }
+  $m13:$m13+0.25
+}
+//////////////
+$m14:2.5;
+@for $item from 8 through 10{
+  .mb-#{$item}-h{
+    @include m(b,$m14+0rem);
+  }
+  $m14:$m14+1
+}
+
+///////////////////////////////////////// font weight classes
+$fw:200;
+@for $item from 1 through 8{
+  .fw-#{$item}-h{
+    @include fw($fw)
+  }
+  $fw:$fw+100
+}
+///////////////////////////////////////// font size classes
+.fs-1-h {
+  @include fs(0.5rem);
+}
+
+.fs-2-h {
+  @include fs(0.85rem);
+}
+//////
+$fs1:1;
+@for $item from 3 through 7{
+  .fs-#{$item}-h{
+    @include fs($fs1+0rem);
+  }
+  $fs1:$fs1+0.25
+}
+//////////////
+$fs2:2.5;
+@for $item from 8 through 10{
+  .fs-#{$item}-h{
+    @include fs($fs2+0rem);
+  }
+  $fs2:$fs2+1
+}
+
+/////////////////////////// line height classes
+@for $item from 2 through 5{
+  .lh-#{$item}-h{
+    @include lh($item)
+  }
+}
+/////////////////////// container
+.container{
+  @include container;
+}

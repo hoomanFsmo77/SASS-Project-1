@@ -1,0 +1,149 @@
+@import "Variables";
+////////////////// fonts
+@mixin fontFamily{
+  font-family: Cairo,sans-serif !important;
+}
+/////////////////// offset
+@mixin offset($m_direction,$m_value,$p_direction,$p_value){
+  @if($m_direction==all and $p_direction==all){
+    margin: $m_value;
+    padding: $p_value;
+  } @else if($m_direction==all){
+    margin: $m_value;
+    padding-#{$p_direction}:$p_value ;
+  }@else if($p_direction==all){
+    padding: $p_value;
+    margin-#{$m_direction}:$m_value;
+  }@else{
+    margin-#{$m_direction}:$m_value;
+    padding-#{$p_direction}:$p_value ;
+  }
+}
+//////////////// padding
+@mixin p($direction,$p){
+  @if($direction==all){
+    padding: $p;
+  }@else if($direction==t){
+    padding-top: $p;
+  }@else if($direction==b){
+    padding-bottom: $p;
+  }@else if($direction==r){
+    padding-right: $p;
+  }@else if($direction==l){
+    padding-left: $p;
+  }
+}
+///////////////// margin
+@mixin m($direction,$m){
+  @if($direction==all){
+    margin: $m;
+  }@else if($direction==t){
+    margin-top: $m;
+  }@else if($direction==b){
+    margin-bottom: $m;
+  }@else if($direction==r){
+    margin-right: $m;
+  }@else if($direction==l){
+    margin-left: $m;
+  }
+}
+//////////////// font weight
+@mixin fw($fw){
+  font-weight: $fw;
+}
+/////////////// font sizes
+@mixin fs($fs){
+  font-size: $fs;
+}
+////////////// line height
+@mixin lh($lh){
+  line-height: $lh;
+}
+//////////////// display flex
+@mixin display($d,$one,$two,$three){
+  @if  ($d== f)  {
+    display: flex;
+    flex-direction: $one;
+    justify-content: $two;
+    align-items: $three;
+  }@else if($d== f-i){
+    display: flex!important;
+    flex-direction: $one;
+    justify-content: $two;
+    align-items: $three;
+  }@else if($d== g-i){
+    display: grid!important;
+    grid-template-columns: $one;
+    grid-template-rows: $two;
+    grid-template-areas: $three;
+  }@else if ($d== g)  {
+    display: grid;
+    grid-template-columns: $one;
+    grid-template-rows: $two;
+    grid-template-areas: $three;
+  }
+}
+///////////////// justify and align
+@mixin ja($justify,$align){
+  justify-content: $justify;
+  align-items: $align;
+}
+///////////////// border radius
+@mixin borderRadius($br){
+  border-radius: $br;
+}
+////////////// border functions
+
+@mixin border($direction,$br){
+  @if($direction==all){
+    border: $br;
+  }@else if($direction==r){
+    border-right: $br;
+  }@else if($direction==l){
+    border-left: $br;
+  }@else if($direction==t){
+    border-top: $br;
+  }@else if($direction==b){
+    border-bottom: $br;
+  }
+
+}
+//////////// media query
+@mixin q($size){
+  @if($size==m){
+    @media (max-width: 768px) {
+      @content;
+    }
+  }@else if($size==l){
+    @media (min-width:768px ) and (max-width: 1200px) {
+      @content;
+    }
+  }
+}
+/////////////// dimension
+@mixin dimension($width,$height){
+  width: $width;
+  height: $height;
+}
+/////////////// test styles
+@mixin textStyle($size,$weight,$color){
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+//////////////////// container
+@mixin container{
+  max-width:calc(100% - 6rem) ;
+  margin: 0 auto;
+}
+////////////////// box style
+@mixin boxStyle{
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  background-color: white;
+  overflow: hidden;
+}
+
+
+
+
